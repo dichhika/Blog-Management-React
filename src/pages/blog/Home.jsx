@@ -20,9 +20,8 @@ const Home = () => {
       <Layout>
         <div className="flex flex-wrap justify-center space-x-5 mt-3">
           {blogs.length > 0 &&
-            blogs.map((blog) => {
-              console.log(blog);
-              return <Card blog={blog} />;
+            blogs.map((blog, index) => {
+              return <Card blog={blog} key={index} />;
             })}
         </div>
       </Layout>
