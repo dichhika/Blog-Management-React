@@ -9,7 +9,7 @@ const Register = () => {
   const handleRegister = async (data) => {
     try {
       const response = await axios.post(`${baseURL}/register`, data);
-      console.log(response);
+
       if (response.status === 201) {
         navigate("/login");
       } else {
